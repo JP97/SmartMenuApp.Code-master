@@ -10,14 +10,25 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            string Line1;
-            string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
-            Line1 = file.ReadLine();
-            Line2 = file.ReadLine();
+            string line;
+            string hovedsætning = "";
 
-            Console.WriteLine(Line1);
-            Console.Write(Line2);
+            //string Line2;
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
+            line = file.ReadLine();
+            //Line2 = file.ReadLine();
+
+            while ((line = file.ReadLine()) != null)
+            {
+                System.Console.WriteLine(line);
+                hovedsætning += line;
+                
+
+                
+            }
+
+            
+
             Console.ReadKey();
         }
         public void Activate()
