@@ -10,7 +10,11 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            // Implement ...
+            string Line1;
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\julia\Desktop\programmerings-projekt\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
+            Line1 = file.ReadLine();
+            Console.WriteLine(Line1);
+            Console.ReadLine();
         }
         public void Activate()
         {
