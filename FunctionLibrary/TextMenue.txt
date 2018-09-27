@@ -1,8 +1,0 @@
-﻿menutitel;
-menuvalg-forklaring;
-indtast 1 for plus; 1
-indtast 2 for minus; 2
-indtast 3 for gange; 3
-indtast 4 for dividere; 4
-
-

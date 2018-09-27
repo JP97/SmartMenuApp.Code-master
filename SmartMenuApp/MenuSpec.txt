@@ -1,0 +1,8 @@
+﻿<Det her er en pladsholder>
+<menutitel>;
+<menuvalg-forklaring>;
+<indtast 1 for do this>;<1>;
+<intast 2 for do that>;<2>;
+<intast 3 do something> <3>;
+<indtast 4 for skift til skift sprog>;<4>;
+<indtast 0 for exit>;<0>;
