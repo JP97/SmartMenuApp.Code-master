@@ -12,11 +12,9 @@ namespace SmartMenuLibrary
         {
             string line;
             string hovedsætning = "";
-
-            //string Line2;
+           
             System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path +"");
             line = file.ReadLine();
-            //Line2 = file.ReadLine();
            
             while ((line = file.ReadLine()) != null)
             {
@@ -24,7 +22,6 @@ namespace SmartMenuLibrary
                 hovedsætning += line;
                 
             }
-            
         }
         public void Activate()
         { 
