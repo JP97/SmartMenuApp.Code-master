@@ -17,7 +17,7 @@ namespace SmartMenuLibrary
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
             line = file.ReadLine();
             //Line2 = file.ReadLine();
-
+            //f
             while ((line = file.ReadLine()) != null)
             {
                 System.Console.WriteLine(line);
