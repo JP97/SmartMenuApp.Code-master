@@ -24,14 +24,10 @@ namespace SmartMenuLibrary
         }
         public void Activate()
         { 
-
-
             Console.WriteLine("intast et tal fra menu");
 
             string indtast = Console.ReadLine();
             int menuevalg = int.Parse(indtast);
-
-            
 
             if (menuevalg >= 0 && menuevalg <= 5)
             {
