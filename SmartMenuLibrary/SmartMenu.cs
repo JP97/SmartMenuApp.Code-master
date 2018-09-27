@@ -14,7 +14,7 @@ namespace SmartMenuLibrary
             string hovedsætning = "";
 
             //string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mathias Elken\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
             line = file.ReadLine();
             //Line2 = file.ReadLine();
             //f
@@ -33,7 +33,7 @@ namespace SmartMenuLibrary
             string hovedsætning = "";
             
             //string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mathias Elken\source\repos\SmartMenuApp.Code-master2\FunctionLibrary\TextMenue.txt");
             line = file.ReadLine();
             //Line2 = file.ReadLine();
 
@@ -45,12 +45,12 @@ namespace SmartMenuLibrary
             string[] menuIArray= hovedsætning.Split(';');
 
 
-            Console.WriteLine("intast et tal fra menu");
+            Console.WriteLine("indtast et tal fra menu");
 
             int første = int.Parse(menuIArray[3]);
             int anden = int.Parse(menuIArray[5]);
-            int trejde = int.Parse(menuIArray[7]);
-            int fjere = int.Parse(menuIArray[9]);
+            int tredje = int.Parse(menuIArray[7]);
+            int fjerde = int.Parse(menuIArray[9]);
 
             int menuevalg = int.Parse(Console.ReadLine());
             
