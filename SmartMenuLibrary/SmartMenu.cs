@@ -18,7 +18,6 @@ namespace SmartMenuLibrary
            
             while ((line = file.ReadLine()) != null)
             {
-              //  System.Console.WriteLine(line);
                 hovedsætning += line;
             }
         }
