@@ -25,8 +25,6 @@ namespace SmartMenuLibrary
                 
             }
             
-            
-            
         }
         public void Activate()
         {
