@@ -12,49 +12,49 @@ namespace SmartMenuLibrary
         {
             string line;
             string hovedsætning = "";
-
-            //string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path + "");
+           
+            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path +"");
             line = file.ReadLine();
-            //Line2 = file.ReadLine();
-            //f
+           
             while ((line = file.ReadLine()) != null)
             {
-                System.Console.WriteLine(line);
                 hovedsætning += line;
-                
             }
-            
         }
         public void Activate()
-        {
-             
-            string line;
-            string hovedsætning = "";
+        { 
+            Console.WriteLine("intast et tal fra menu");
 
-            //string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path + "");
-            int menuevalg = int.Parse(Console.ReadLine());
-            
+            string indtast = Console.ReadLine();
+            int menuevalg = int.Parse(indtast);
 
-            if (menuevalg >= 0 && menuevalg <= 9)
+            if (menuevalg >= 0 && menuevalg <= 5)
             {
-                if (menuevalg == 3)
+                if (menuevalg == 1)
                 {
-                    Console.WriteLine("det er 3");
+                    Console.WriteLine("punkt 1 udført");
+                }
+                else if (menuevalg == 2)
+                {
+                    Console.WriteLine("punkt 2 udført");
+                }
+                else if (menuevalg == 3)
+                {
+                    Console.WriteLine("punkt 3 udført");
+                }
+                else if (menuevalg == 4)
+                {
+                    Console.WriteLine("punkt 4 udført");
                 }
                 else if (menuevalg == 5)
                 {
-                    Console.WriteLine("punkt 5 udført");
+                    Console.WriteLine("nu er menuet på engelsk");
                 }
-                else if (menuevalg == 7)
+                else if (menuevalg == 0)
                 {
-                    Console.WriteLine("punkt 7 udført");
+                    Console.WriteLine("Slutter Programmet");
                 }
-                else if (menuevalg == 9)
-                {
-                    Console.WriteLine("punkt 9 udført");
-                }
+                Console.ReadLine();
             }
         }
     }
