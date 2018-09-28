@@ -15,16 +15,16 @@ namespace SmartMenuLibrary
         public void LoadMenu(string path)
         {
             hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(1).Take(8).ToArray();
-            for (int i = 0; hovedsætningArray.Length > i; i++)
-            {
-                Console.WriteLine(hovedsætningArray[i]);
-            }
+            
         }
         
         public void Activate()
         {
 
-
+            for (int i = 0; hovedsætningArray.Length > i; i++)
+            {
+                Console.WriteLine(hovedsætningArray[i]);
+            }
 
             Console.WriteLine(hovedsætning);
             Console.WriteLine("intast et tal fra menu");
