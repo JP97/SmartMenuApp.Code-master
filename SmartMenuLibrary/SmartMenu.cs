@@ -10,6 +10,7 @@ namespace SmartMenuLibrary
     public class SmartMenu
     {
         string[] hovedsætningArray;
+        string[] hovedsætningArraypaeengelsk;
         string hovedsætning = "";
         string line;
         public void LoadMenu(string path)
