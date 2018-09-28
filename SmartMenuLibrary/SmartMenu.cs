@@ -13,11 +13,10 @@ namespace SmartMenuLibrary
             string line;
             string hovedsætning = "";
 
-            //string Line2;
+           
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
             line = file.ReadLine();
-            //Line2 = file.ReadLine();
-            //f
+            
             while ((line = file.ReadLine()) != null)
             {
                 System.Console.WriteLine(line);
@@ -28,52 +27,41 @@ namespace SmartMenuLibrary
         }
         public void Activate()
         {
-             
-            string line;
-            string hovedsætning = "";
-            
-            //string Line2;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
-            line = file.ReadLine();
-            //Line2 = file.ReadLine();
+            Console.Write("intast et menupunkt: ");
+            int intastMenuPunkt = int.Parse(Console.ReadLine());
 
-            while ((line = file.ReadLine()) != null)
+            if (intastMenuPunkt >= 0 && intastMenuPunkt <= 4)
             {
-                hovedsætning += line;
-
-            }
-            string[] menuIArray= hovedsætning.Split(';');
-
-
-            Console.WriteLine("intast et tal fra menu");
-
-            int første = int.Parse(menuIArray[3]);
-            int anden = int.Parse(menuIArray[5]);
-            int trejde = int.Parse(menuIArray[7]);
-            int fjere = int.Parse(menuIArray[9]);
-
-            int menuevalg = int.Parse(Console.ReadLine());
-            
-
-            if (menuevalg >= 0 && menuevalg <= 9)
-            {
-                if (menuevalg == 3)
+                while (intastMenuPunkt >= 0 && intastMenuPunkt <= 4)
                 {
-                    Console.WriteLine("det er 3");
-                }
-                else if (menuevalg == 5)
-                {
-                    Console.WriteLine("punkt 5 udført");
-                }
-                else if (menuevalg == 7)
-                {
-                    Console.WriteLine("punkt 7 udført");
-                }
-                else if (menuevalg == 9)
-                {
-                    Console.WriteLine("punkt 9 udført");
+                    if (intastMenuPunkt == 0)
+                    {
+                        //hvad der skal ske for punkt 0
+                    }
+                    else if (intastMenuPunkt == 1)
+                    {
+                        //hvad der skal ske for punkt 1..
+                    }
+                    else if (intastMenuPunkt == 2)
+                    {
+                        //hvad der skal ske for punkt 2..
+                    }
+                    else if (intastMenuPunkt == 3)
+                    {
+                        //osv
+                    }
+                    else if (intastMenuPunkt == 4)
+                    {
+
+                    }
+
+                    Console.Write("Intast et nyt menupunkt, eller tryk 5 for at afslutte ");
+                    intastMenuPunkt = int.Parse(Console.ReadLine());    //opdatere input
                 }
             }
+            
+            
+            
         }
     }
 }
