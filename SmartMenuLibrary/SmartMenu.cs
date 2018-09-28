@@ -14,8 +14,8 @@ namespace SmartMenuLibrary
         string line;
         public void LoadMenu(string path)
         {
-            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(1).Take(8).ToArray();
-            
+            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Take(8).ToArray();
+            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(8).Take(8).ToArray();
         }
         
         public void Activate()
