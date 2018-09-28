@@ -52,10 +52,8 @@ namespace SmartMenuLibrary
 
             Console.WriteLine();  // springer en linje over for at give plads
 
-            do
+            do      // loop der gentager vores menu, hvis input ikke er 0
             {
-
-
 
                 Console.Write("intast et tal fra menu, eller tryk 0 for at afslutte: ");
                 caseSwitch = int.Parse(Console.ReadLine());   //intast fra bruger til at angive et nummer fra menupunkt
@@ -84,7 +82,7 @@ namespace SmartMenuLibrary
                         break;
 
                 }
-            } while (caseSwitch != 0);
+            } while (caseSwitch != 0);  // condition fra do-while loop. Nå input ikke er et 0 gentages loopet igen
         }
     }
 }
