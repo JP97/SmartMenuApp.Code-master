@@ -3,8 +3,8 @@ menuvalg-forklaring;
 indtast 1 for do this
 intast 2 for do that
 intast 3 do something
-indtast 4 for skift til skift sprog
 indtast 0 for exit
+
 
 Menutitle;
 Menudecision-explanation

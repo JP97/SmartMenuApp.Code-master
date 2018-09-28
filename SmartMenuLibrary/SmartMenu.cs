@@ -61,18 +61,23 @@ namespace SmartMenuLibrary
             {
                 case 1:
                     Console.WriteLine("du har valgt nr. 1");
+                    
+                    Console.ReadLine();
                     break;
 
                 case 2:
                     Console.WriteLine("du har valgt nummer 2");
+                    Console.ReadLine();
                     break;
 
                 case 3:
                     Console.WriteLine("du har valgt nummer 3");
+                    Console.ReadLine();
                     break;
 
                 case 4:
                     Console.WriteLine("du har valgt nummer 4");
+                    Console.ReadLine();
                     break;
 
                 default:
