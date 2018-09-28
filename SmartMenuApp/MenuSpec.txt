@@ -1,0 +1,8 @@
+﻿Det her er en pladsholder;
+menutitel;
+menuvalg-forklaring;
+indtast 1 for do this; dothis;
+intast 2 for do that; dothat;
+intast 3 do something; dosomething;
+indtast 4 for skift til skift sprog; 4;
+indtast 0 for exit; 0;

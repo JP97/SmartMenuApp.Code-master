@@ -1,9 +1,0 @@
-﻿menutitel;
-menuvalg-forklaring;
-intast 1 for plus
-intast 2 for minus
-intast 3 for gange
-intast 4 for dividere
-intast 5 for at afslutte
-
-

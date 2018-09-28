@@ -8,60 +8,59 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
+        
+        string hovedsætning = "";
+
         public void LoadMenu(string path)
         {
             string line;
-            string hovedsætning = "";
-
-           
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Mia\source\repos\SmartMenuApp.Code-master\FunctionLibrary\TextMenue.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path +"");
             line = file.ReadLine();
-            
+           
             while ((line = file.ReadLine()) != null)
             {
-                System.Console.WriteLine(line);
                 hovedsætning += line;
-                
             }
+
             
         }
         public void Activate()
         {
-            Console.Write("intast et menupunkt: ");
-            int intastMenuPunkt = int.Parse(Console.ReadLine());
 
-            if (intastMenuPunkt >= 0 && intastMenuPunkt <= 4)
+            Console.WriteLine(hovedsætning);
+            Console.WriteLine("intast et tal fra menu");
+
+            string indtast = Console.ReadLine();
+            int menuevalg = int.Parse(indtast);
+
+            if (menuevalg >= 0 && menuevalg <= 5)
             {
-                while (intastMenuPunkt >= 0 && intastMenuPunkt <= 4)
+                if (menuevalg == 1)
                 {
-                    if (intastMenuPunkt == 0)
-                    {
-                        //hvad der skal ske for punkt 0
-                    }
-                    else if (intastMenuPunkt == 1)
-                    {
-                        //hvad der skal ske for punkt 1..
-                    }
-                    else if (intastMenuPunkt == 2)
-                    {
-                        //hvad der skal ske for punkt 2..
-                    }
-                    else if (intastMenuPunkt == 3)
-                    {
-                        //osv
-                    }
-                    else if (intastMenuPunkt == 4)
-                    {
-
-                    }
-
-                    Console.Write("Intast et nyt menupunkt, eller tryk 5 for at afslutte ");
-                    intastMenuPunkt = int.Parse(Console.ReadLine());    //opdatere input
+                    Console.WriteLine("punkt 1 udført");
                 }
+                else if (menuevalg == 2)
+                {
+                    Console.WriteLine("punkt 2 udført");
+                }
+                else if (menuevalg == 3)
+                {
+                    Console.WriteLine("punkt 3 udført");
+                }
+                else if (menuevalg == 4)
+                {
+                    Console.WriteLine("punkt 4 udført");
+                }
+                else if (menuevalg == 5)
+                {
+                    Console.WriteLine("nu er menuet på engelsk");
+                }
+                else if (menuevalg == 0)
+                {
+                    Console.WriteLine("Slutter Programmet");
+                }
+                Console.ReadLine();
             }
-            
-            
-            
         }
     }
 }
