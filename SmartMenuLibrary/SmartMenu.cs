@@ -16,11 +16,12 @@ namespace SmartMenuLibrary
         public void LoadMenu(string path)
         {
             hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Take(8).ToArray();
-            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(8).Take(8).ToArray();
+            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(9).Take(10).ToArray();
         }
         
         public void Activate()
         {
+            
 
             for (int i = 0; hovedsætningArray.Length > i; i++)
             {
