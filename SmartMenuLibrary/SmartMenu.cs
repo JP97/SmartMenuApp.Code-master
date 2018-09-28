@@ -10,13 +10,16 @@ namespace SmartMenuLibrary
     public class SmartMenu
     {
         string[] hovedsætningArray;
+        string[] hovedsætningArray1;
         string[] hovedsætningArraypaeengelsk;
         string hovedsætning = "";
         string line;
         public void LoadMenu(string path)
         {
             hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Take(8).ToArray();
-            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(9).Take(10).ToArray();
+            hovedsætningArray1 = File.ReadLines(@"..\..\" + path + "").Skip(9).Take(10).ToArray();
+
+
         }
         
         public void Activate()
