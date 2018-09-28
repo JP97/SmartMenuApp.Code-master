@@ -34,7 +34,7 @@ namespace SmartMenuLibrary
             if (indtastAfSprog == 1)
             {
                 // udskriver på dansk:
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < hovedsætningArrayDansk.Length; i++)
                 {
                     Console.WriteLine(hovedsætningArrayDansk[i]); 
                 }
@@ -42,7 +42,7 @@ namespace SmartMenuLibrary
             else if (indtastAfSprog == 2)
             {
                 //udskriver på engelsk:
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < hovedsaetningArrayEngelsk.Length; i++)
                 {
                     Console.WriteLine(hovedsaetningArrayEngelsk[i]); 
                 }
