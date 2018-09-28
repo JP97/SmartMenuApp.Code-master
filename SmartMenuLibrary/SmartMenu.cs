@@ -3,32 +3,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
-        
+        string[] hovedsætningArray;
         string hovedsætning = "";
-
+        string line;
         public void LoadMenu(string path)
         {
-            string line;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path +"");
-            line = file.ReadLine();
-           
-            while ((line = file.ReadLine()) != null)
+            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Skip(1).Take(8).ToArray();
+            for (int i = 0; hovedsætningArray.Length > i; i++)
             {
-                hovedsætning += line;
+                Console.WriteLine(hovedsætningArray[i]);
             }
-
-            
         }
+        
         public void Activate()
         {
 
+
+
             Console.WriteLine(hovedsætning);
             Console.WriteLine("intast et tal fra menu");
+
+            int caseSwitch = int.Parse(Console.ReadLine());
+
+
+            switch (caseSwitch)
+            {
+                case 1:
+                    Console.WriteLine("noget");
+                    break;
+
+                case 2:
+                    Console.WriteLine("2");
+                    break;
+
+                case 3:
+                    Console.WriteLine("3");
+                    break;
+
+                case 4:
+                    Console.WriteLine("4");
+                    break;
+
+                default:
+                    break;
+
+            }
+
+
 
             string indtast = Console.ReadLine();
             int menuevalg = int.Parse(indtast);
