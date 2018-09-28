@@ -9,89 +9,75 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
-        string[] hovedsætningArray;
-        string[] hovedsætningArray1;
-        string[] hovedsætningArraypaeengelsk;
-        string hovedsætning = "";
-        string line;
+        string[] hovedsætningArrayDansk;
+
+        string[] hovedsaetningArrayEngelsk;
+        
         public void LoadMenu(string path)
         {
-            hovedsætningArray = File.ReadLines(@"..\..\" + path + "").Take(8).ToArray();
-            hovedsætningArray1 = File.ReadLines(@"..\..\" + path + "").Skip(9).Take(10).ToArray();
+            // Gemmer den danske menu i et array:
+            hovedsætningArrayDansk = File.ReadLines(@"..\..\" + path + "").Take(8).ToArray(); //Take(8) - så tager den kun 8 linjer 
 
-
+            // Gemmer den engelske menu i et array:
+            hovedsaetningArrayEngelsk = File.ReadLines(@"..\..\" + path + "").Skip(9).Take(6).ToArray(); // Skip(9) - den springer de første 9 linjer over
         }
         
         public void Activate()
         {
-            
 
-            for (int i = 0; hovedsætningArray.Length > i; i++)
+            Console.WriteLine("Tryk på 1 for dansk \nTryk på 2 for engelsk");
+            
+            int indtastAfSprog = int.Parse(Console.ReadLine());    // En indtast fra bruger om hvilket sprog, indtast er lavet om til et tal:
+
+            // hvis bruger intaster 1 så udskriver den menu på dansk
+            //hvis bruger intaster 2 så udskriver den menu på engelsk:
+            if (indtastAfSprog == 1)
             {
-                Console.WriteLine(hovedsætningArray[i]);
+                // udskriver på dansk:
+                for (int i = 0; i < 8; i++)
+                {
+                    Console.WriteLine(hovedsætningArrayDansk[i]); 
+                }
+            }
+            else if (indtastAfSprog == 2)
+            {
+                //udskriver på engelsk:
+                for (int i = 0; i < 6; i++)
+                {
+                    Console.WriteLine(hovedsaetningArrayEngelsk[i]); 
+                }
+                
             }
 
-            Console.WriteLine(hovedsætning);
-            Console.WriteLine("intast et tal fra menu");
+            Console.WriteLine();  // springer en linje over for at give plads
 
-            int caseSwitch = int.Parse(Console.ReadLine());
+            Console.Write("intast et tal fra menu, eller tryk 0 for at afslutte: ");
+            int caseSwitch = int.Parse(Console.ReadLine());   //intast fra bruger til at angive et nummer fra menupunkt
 
+            Console.WriteLine();   // springer en linje over for at give plads
 
+            //Vores switch:
             switch (caseSwitch)
             {
                 case 1:
-                    Console.WriteLine("noget");
+                    Console.WriteLine("du har valgt nr. 1");
                     break;
 
                 case 2:
-                    Console.WriteLine("2");
+                    Console.WriteLine("du har valgt nummer 2");
                     break;
 
                 case 3:
-                    Console.WriteLine("3");
+                    Console.WriteLine("du har valgt nummer 3");
                     break;
 
                 case 4:
-                    Console.WriteLine("4");
+                    Console.WriteLine("du har valgt nummer 4");
                     break;
 
                 default:
                     break;
 
-            }
-
-
-
-            string indtast = Console.ReadLine();
-            int menuevalg = int.Parse(indtast);
-
-            if (menuevalg >= 0 && menuevalg <= 5)
-            {
-                if (menuevalg == 1)
-                {
-                    Console.WriteLine("punkt 1 udført");
-                }
-                else if (menuevalg == 2)
-                {
-                    Console.WriteLine("punkt 2 udført");
-                }
-                else if (menuevalg == 3)
-                {
-                    Console.WriteLine("punkt 3 udført");
-                }
-                else if (menuevalg == 4)
-                {
-                    Console.WriteLine("punkt 4 udført");
-                }
-                else if (menuevalg == 5)
-                {
-                    Console.WriteLine("nu er menuet på engelsk");
-                }
-                else if (menuevalg == 0)
-                {
-                    Console.WriteLine("Slutter Programmet");
-                }
-                Console.ReadLine();
             }
         }
     }
