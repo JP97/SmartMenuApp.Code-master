@@ -8,11 +8,12 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
+        
+        string hovedsætning = "";
+
         public void LoadMenu(string path)
         {
             string line;
-            string hovedsætning = "";
-           
             System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\" + path +"");
             line = file.ReadLine();
            
@@ -20,9 +21,13 @@ namespace SmartMenuLibrary
             {
                 hovedsætning += line;
             }
+
+            
         }
         public void Activate()
-        { 
+        {
+
+            Console.WriteLine(hovedsætning);
             Console.WriteLine("intast et tal fra menu");
 
             string indtast = Console.ReadLine();
